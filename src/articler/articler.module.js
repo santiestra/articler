@@ -4,18 +4,7 @@
   // and are loaded in the correct order to satisfy dependency injection
   // before all nested files are concatenated by Gulp
 
-  // Config
-  angular.module('articler.config', [])
-      .value('articler.config', {
-          debug: true
-      });
-
   // Modules
-  angular.module('articler.filters', ['articler']);
-  angular.module('articler',
-      [
-          'articler.config',
-          'articler.filters'
-      ]);
+  angular.module('articler', []);
 
 })(angular);

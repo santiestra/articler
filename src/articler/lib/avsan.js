@@ -1,24 +1,3 @@
-(function (angular) {
-
-  // Create all modules and define dependencies to make sure they exist
-  // and are loaded in the correct order to satisfy dependency injection
-  // before all nested files are concatenated by Gulp
-
-  // Modules
-  angular.module('articler', []);
-
-})(angular);
-
-angular.module('articler').filter('articler', function() {
-  return function(input, uppercase) {
-    var article = AvsAn.query(input).article;
-    if (uppercase) {
-      article = article.charAt(0).toUpperCase() + article.slice(1);
-    }
-    return  article + ' ' + input;
-  };
-});
-
 //by Eamon Nerbonne (from http://home.nerbonne.org/A-vs-An), Apache 2.0 license
 var AvsAn = (function() {
   "use strict";

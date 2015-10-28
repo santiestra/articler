@@ -19,7 +19,6 @@ var rootDirectory = path.resolve('./');
 var sourceDirectory = path.join(rootDirectory, './src');
 
 var sourceFiles = [
-
   // Make sure module files are handled first
   path.join(sourceDirectory, '/**/*.module.js'),
 
@@ -47,7 +46,7 @@ gulp.task('build', function() {
  * Process
  */
 gulp.task('process-all', function (done) {
-  runSequence('jshint', 'test-src', 'build', done);
+  runSequence('jshint', 'test', 'build', done);
 });
 
 /**
@@ -73,27 +72,8 @@ gulp.task('jshint', function () {
 /**
  * Run test once and exit
  */
-gulp.task('test-src', function (done) {
-  karma.start({
-    configFile: __dirname + '/karma-src.conf.js',
-    singleRun: true
-  }, done);
-});
-
-/**
- * Run test once and exit
- */
-gulp.task('test-dist-concatenated', function (done) {
-  karma.start({
-    configFile: __dirname + '/karma-dist-concatenated.conf.js',
-    singleRun: true
-  }, done);
-});
-
-/**
- * Run test once and exit
- */
-gulp.task('test-dist-minified', function (done) {
+gulp.task('test', function (done) {
+  runSequence('build');
   karma.start({
     configFile: __dirname + '/karma-dist-minified.conf.js',
     singleRun: true

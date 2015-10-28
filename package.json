@@ -5,6 +5,9 @@
     "name": "Santiago Estrago",
     "email": "santiago.estrago@moove-it.com"
   },
+  "repository": "https://github.com/santiestra/articler",
+  "description": "Angular filter to determine if a word should be preceded by a or an",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "chai": "^1.9.1",
