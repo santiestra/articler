@@ -1,18 +1,39 @@
-<div class="" ng-app="articler-demo">
-  <div class="" ng-controller="DemoController">
-    <h2>Articler Demo</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="demo/demo.css">
+    <meta charset="utf-8">
+    <title>Articler Demo</title>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout" ng-app="articler-demo">
+      <div class="" ng-controller="DemoController">
+        <header class="mdl-layout__header">
+          <h2>Articler Demo</h2>
+        </header>
 
-    <input type="text" placeholder="Write a word" ng-model="word">
-    <label for="upper">Uppercase:</label>
-    <input type="checkbox" ng-model="uppercase" id="upper">
+        <main class="mdl-layout__content">
 
-    <h3>Result</h3>
-    <h4>{{ word | articler: uppercase }}</h4>
-  </div>
-</div>
+          <input class="mdl-textfield__input" type="text" placeholder="Write a word" ng-model="word">
+
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" ng-model="uppercase" />
+            <span class="mdl-checkbox__label">Uppercase</span>
+          </label>
+
+
+          <h3>Result</h3>
+          <h4>{{ word | articler: uppercase }}</h4>
+        </main>
+      </div>
+    </div>
 
 
 
-<script type="text/javascript" src="demo/lib/angular.min.js"></script>
-<script type="text/javascript" src="dist/articler.min.js"></script>
-<script type="text/javascript" src="demo/demo.js"></script>
+    <script type="text/javascript" src="demo/lib/angular.min.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <script type="text/javascript" src="dist/articler.min.js"></script>
+    <script type="text/javascript" src="demo/demo.js"></script>
+  </body>
+</html>
