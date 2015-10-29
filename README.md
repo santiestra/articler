@@ -6,8 +6,17 @@ Angular filter based on the code by [Eamon Nerbonne](http://eamon.nerbonne.org/2
 
 This package provides a filter to determine if a word should be preceded by "a" or "an".
 
+## Installation
+```
+bower install --save articler
+```
 
-**Example**
+**Add it to you dependencies**
+```
+angular.module('demo', ['articler']);
+```
+
+## Example
 ```
 {{ house | articler }}
 ```
