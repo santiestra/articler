@@ -1,0 +1,18 @@
+<div class="" ng-app="articler-demo">
+  <div class="" ng-controller="DemoController">
+    <h2>Articler Demo</h2>
+
+    <input type="text" placeholder="Write a word" ng-model="word">
+    <label for="upper">Uppercase:</label>
+    <input type="checkbox" ng-model="uppercase" id="upper">
+
+    <h3>Result</h3>
+    <h4>{{ word | articler: uppercase }}</h4>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="demo/lib/angular.min.js"></script>
+<script type="text/javascript" src="dist/articler.min.js"></script>
+<script type="text/javascript" src="demo/demo.js"></script>
