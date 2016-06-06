@@ -21,7 +21,24 @@ angular.module('demo', ['articler']);
 {{ house | articler }}
 ```
 
-With uppercase
-```
-{{ house | articler: true }}
-```
+### Options
+
+  - Uppercase (the first letter of the article is on uppercase)
+  - Only article (it returns only the article)
+
+  ### Examples
+
+  Uppercase
+  ```
+  {{ house | articler: true }}
+  ```
+
+  Only article
+  ```
+  {{ house | articler: false:true }}
+  ```
+
+  Uppercase and only article
+  ```
+  {{ house | articler: true:false }}
+  ```
