@@ -40,5 +40,5 @@ angular.module('demo', ['articler']);
 
   Uppercase and only article
   ```
-  {{ house | articler: true:false }}
+  {{ house | articler: true:true }}
   ```
