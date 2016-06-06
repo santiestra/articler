@@ -21,7 +21,7 @@ angular.module('demo', ['articler']);
 {{ house | articler }}
 ```
 
-### Options
+## Options
 
   - Uppercase (the first letter of the article is on uppercase)
   - Only article (it returns only the article)
