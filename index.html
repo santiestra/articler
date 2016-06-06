@@ -21,10 +21,14 @@
             <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" ng-model="uppercase" />
             <span class="mdl-checkbox__label">Uppercase</span>
           </label>
+          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+            <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" ng-model="onlyArticle" />
+            <span class="mdl-checkbox__label">Only article</span>
+          </label>
 
 
           <h3>Result</h3>
-          <h4>{{ word | articler: uppercase }}</h4>
+          <h4>{{ word | articler: uppercase:onlyArticle }}</h4>
         </main>
       </div>
     </div>
